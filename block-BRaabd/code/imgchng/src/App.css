@@ -1,0 +1,21 @@
+.buttons button {
+  margin-top: 120px;
+  padding: 10px;
+  background-color: blue;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.img-container {
+  margin-top: 120px;
+}
+.img-container img {
+  width: 100%;
+}
