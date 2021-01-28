@@ -12,7 +12,7 @@ class App extends React.Component {
   }
   display = () => {
     this.setState({
-      isActive: true,
+      isActive: !this.state.isActive,
     });
   };
   render() {
