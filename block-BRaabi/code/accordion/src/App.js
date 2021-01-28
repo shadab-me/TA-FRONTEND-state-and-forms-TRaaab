@@ -2,36 +2,18 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 import questions from "./config/question.json";
-
+import Accordion from "./components/Accordion";
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isActive: false,
-    };
-  }
-  display = () => {
-    this.setState({
-      isActive: !this.state.isActive,
-    });
-  };
   render() {
     return (
       <div className="card">
         {questions.map((question) => {
-          return (
-            <div className="card" key={question}>
-              <button className="accordion" onClick={this.display}>
-                {question.question}
-              </button>
-              <p className={this.state.isActive ? "active" : "panel"}>
-                {question.answer}
-              </p>
-            </div>
-          );
+          return <Accordion question={question} />;
         })}
       </div>
     );
   }
 }
+function Question(props) {}
+
 export default App;
