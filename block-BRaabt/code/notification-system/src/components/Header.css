@@ -10,3 +10,8 @@ button {
 i {
   cursor: pointer;
 }
+main {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
