@@ -22,12 +22,14 @@ class Header extends React.Component {
 
   checkStatus = (btn) => {
     return (
-      <div className="w-2/4 bg-blue-200 m-2 p-3 sticky">
+      <div className="w-2/4 bg-blue-200 m-2 p-3 sticky flex justify-between">
         <p>{btn}</p>
         <i
           className="far fa-times cursor-pointer"
           onClick={() => this.changeActive(btn)}
-        ></i>
+        >
+          X
+        </i>
       </div>
     );
   };
