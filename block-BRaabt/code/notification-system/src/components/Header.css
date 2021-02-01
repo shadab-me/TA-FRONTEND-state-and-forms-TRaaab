@@ -1,0 +1,12 @@
+button {
+  cursor: pointer;
+}
+.flex {
+  display: flex;
+}
+.active {
+  background-color: pink;
+}
+i {
+  cursor: pointer;
+}
