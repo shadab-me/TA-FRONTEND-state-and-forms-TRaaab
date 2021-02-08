@@ -1,0 +1,12 @@
+.flex-main {
+  display: flex;
+}
+
+.nav-section {
+  width: 20%;
+}
+.main {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
