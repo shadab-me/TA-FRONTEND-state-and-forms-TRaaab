@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom-css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+input[type="text"] {
+  width: 50%;
+  margin-right: 20px;
+  padding: 13px 10px;
+  outline: 0;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+input[type="range"] {
+  width: 40%;
+}
+
+.font-card {
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+.inner-card {
+  width: 30%;
+  height: 400px;
+  margin-bottom: 40px;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 8px 16px 16px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 30px 0;
+  color: blue;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.created-by {
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.font {
+  margin: 20px 0;
+}
+
+span {
+  font-size: 20px;
+}
