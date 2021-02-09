@@ -14,6 +14,7 @@ function orderBy(clothesList, order) {
 function changeOrder(event, products, cb) {
   cb(orderBy(products, event.target.value));
 }
+
 function Topbar(props) {
   return (
     <div className="order">

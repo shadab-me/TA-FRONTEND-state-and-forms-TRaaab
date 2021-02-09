@@ -20,9 +20,9 @@ class Home extends React.Component {
     });
   };
 
-  filterHandler = async (filterProduct, size) => {
+  filterHandler = (size) => {
     if (this.state.filters.includes(size)) {
-      await this.setState({
+      this.setState({
         filters: this.state.filters.filter((fil) => fil !== size),
       });
     } else {
@@ -30,9 +30,6 @@ class Home extends React.Component {
         filters: [...this.state.filters, size],
       });
     }
-    this.setState({
-      products: filterProduct,
-    });
   };
   removeFromCart = (product) => {
     let afterRemoved = this.state.productInCart.filter(
@@ -75,6 +72,7 @@ class Home extends React.Component {
       });
     }
   };
+  filterProducts = () => {};
 
   createUI = (products) => {
     return (
@@ -117,6 +115,14 @@ class Home extends React.Component {
   };
 
   render() {
+    let filterProducts = [];
+    this.state.filters.forEach((filter) => {
+      products.products.forEach((product) => {
+        if (product.availableSizes.includes(filter)) {
+          filterProducts.push(product);
+        }
+      });
+    });
     return (
       <div className="p">
         <div className="bag-header">
@@ -146,13 +152,19 @@ class Home extends React.Component {
             <main className="product-section">
               <div className="top flex justify-content">
                 <p className="numberOfProduct">
-                  {this.state.products.length}{" "}
-                  {this.state.products.length > 1 ? "Products" : "Product"}{" "}
+                  {filterProducts.length > 0
+                    ? filterProducts.length
+                    : this.state.products.length}{" "}
+                  {filterProducts.length > 1 || this.state.products.length
+                    ? "Products"
+                    : "Product"}{" "}
                   found.
                 </p>
                 <Topbar state={this.state.products} filter={this.byOrder} />
               </div>
-              {this.createUI(this.state.products)}
+              {this.state.filters.length == 0
+                ? this.createUI(products.products)
+                : this.createUI(filterProducts)}
             </main>
             <div className="product-cart">
               {this.state.isCartActive ? (

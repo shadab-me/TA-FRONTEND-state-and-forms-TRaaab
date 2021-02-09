@@ -1,16 +1,8 @@
 import "./Sidebar.css";
 import products from "../config/data.json";
 
-function clickHandler(cb, filters, size) {
-  let filterProducts = [];
-  filters.forEach((filter) => {
-    products.products.forEach((product) => {
-      if (product.availableSizes.includes(filter)) {
-        filterProducts.push(product);
-      }
-    });
-  });
-  cb(filterProducts, size);
+function clickHandler(cb, size) {
+  cb(size);
 }
 
 function Sidebar(props) {
@@ -24,7 +16,7 @@ function Sidebar(props) {
             return (
               <li
                 className={filters.includes(filter) ? "active-filter" : "f"}
-                onClick={() => clickHandler(filterHandler, filters, filter)}
+                onClick={() => clickHandler(filterHandler, filter)}
               >
                 {filter}
               </li>
